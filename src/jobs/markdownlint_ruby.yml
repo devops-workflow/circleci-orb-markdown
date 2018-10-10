@@ -1,0 +1,11 @@
+parameters:
+  version:
+    description: "Ruby version"
+    default: "10.5.0"
+    type: string
+executor:
+  name: ruby
+  version: << parameters.version >>
+steps:
+  - checkout
+  - markdown_lint_ruby

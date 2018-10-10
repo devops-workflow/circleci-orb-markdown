@@ -1,0 +1,11 @@
+parameters:
+  version:
+    description: "Node version"
+    default: "2.5.1"
+    type: string
+executor:
+  name: node
+  version: << parameters.version >>
+steps:
+  - checkout
+  - markdown_lint_node

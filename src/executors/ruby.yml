@@ -1,0 +1,7 @@
+parameters:
+  version:
+    description: "CircleCI Ruby docker version tag"
+    type: string
+    default: "2.5.1"
+docker:
+  - image: circleci/ruby:<< parameters.version >>

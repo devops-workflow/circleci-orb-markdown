@@ -1,0 +1,13 @@
+description: 'Markdown lint (nodeJS)'
+steps:
+  - run:
+      name: "Install: markdown lint (node.js)"
+      command: |
+          sudo npm install -g markdownlint-cli
+  - run:
+      name: "Check: markdown lint (node.js)"
+      command: |
+          #markdownlint --help
+          echo -n "markdownlint version: "
+          markdownlint --version
+          markdownlint ./

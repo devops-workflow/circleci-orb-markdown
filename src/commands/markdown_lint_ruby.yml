@@ -1,0 +1,15 @@
+description: "Markdown lint (ruby)"
+# Markdown Lint https://github.com/markdownlint/markdownlint
+# https://hub.docker.com/r/circleci/ruby/tags/
+steps:
+  - run:
+      name: "Install: markdown lint (ruby)"
+      command: |
+          gem install mdl
+  - run:
+      name: "Check: markdown lint (ruby)"
+      command: |
+          #mdl --help
+          echo -n "mdl version: "
+          mdl --version
+          mdl .

@@ -1,0 +1,7 @@
+parameters:
+  version:
+    description: "CircleCI Node docker version tag"
+    type: string
+    default: "10.5.0"
+docker:
+  - image: circleci/node:<< parameters.version >>
