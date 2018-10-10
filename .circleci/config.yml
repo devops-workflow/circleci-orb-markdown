@@ -2,9 +2,11 @@ version: 2.1
 
 orbs:
   orb-tools: circleci/orb-tools@volatile
+  utils: devops-workflow/utils@volatile
 workflows:
   btd:
     jobs:
+      - utils/get_orb_name
       - orb-tools/pack-and-validate-orb:
           path: ./src/
           workspace-path: orb-packed/
